@@ -12,6 +12,7 @@ router
     context.response.body = messages;
   })
   .post("/messages", async (context) => {
+    console.log("in messages endpoint");
     const message = await context.request.body().value;
     messages.push(message);
     context.response.body = messages;
